@@ -1,11 +1,6 @@
 import unidecode as ud
 from difflib import SequenceMatcher
 
-from scipy.optimize import direct
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-
 import os
 import unicodedata
 from csv import reader
@@ -74,7 +69,7 @@ def is_from_SUI(nationality_text: str) -> bool:
     """
     return TEXT_NATIONALITY_SUI.lower() in nationality_text.strip().lower()
 
-
+"""
 def wait_for_page_elements_to_load_by(driver, elementIdentifier, elementValue, seconds):
     try:
         WebDriverWait(driver=driver, timeout=seconds).until(
@@ -83,6 +78,7 @@ def wait_for_page_elements_to_load_by(driver, elementIdentifier, elementValue, s
         return driver.find_elements(elementIdentifier, elementValue)
     finally:
         pass
+"""
 
 
 def copy_file_input_stream(input_stream, name):
